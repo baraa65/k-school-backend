@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestj
 import { StudentsService } from './students.service'
 import { studentCollection } from './student.model'
 
-@Controller('students')
+@Controller('student')
 export class StudentsController {
 	constructor(private readonly studentsService: StudentsService) {}
 
