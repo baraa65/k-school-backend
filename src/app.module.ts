@@ -2,10 +2,13 @@ import { Module } from '@nestjs/common'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
+import { Class } from './classes/class.model'
 import { ClassesModule } from './classes/classe.module'
 import { Student } from './students/student.model'
 import { StudentsModule } from './students/students.module'
+import { Subject } from './subjects/subject.model'
 import { SubjectsModule } from './subjects/subjects.module'
+import { Teacher } from './teachers/teacher.model'
 import { TeachersModule } from './teachers/teachers.module'
 
 @Module({
@@ -21,7 +24,7 @@ import { TeachersModule } from './teachers/teachers.module'
 			username: 'root',
 			password: '',
 			database: 'k-school',
-			entities: [Student],
+			entities: [Student, Class, Teacher, Subject],
 			synchronize: true,
 			dropSchema: true,
 		}),
